@@ -1,0 +1,135 @@
+@import '../../styles/colors.scss';
+
+.header-container {
+  width: 1280px;
+  color: $grayTextLight;
+}
+
+.divider {
+  border: 1px solid $grayDividerFull;
+}
+
+.header-top {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  padding: 6px 0;
+
+  .text-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+}
+
+.highlight {
+  color: $pinkPrimary;
+  font-weight: 600;
+}
+
+.header {
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  padding: 0 56px;
+
+  form {
+    height: 48px;
+    width: 657px;
+    margin: 0 61px 0 95px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 10px;
+    background-color: $grayBackgroundInput;
+
+    input {
+      width: 100%;
+      padding: 0 0 0 24px;
+
+      outline: none;
+      border: none;
+      background-color: $grayBackgroundInput;
+      color: $grayTextMedium;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 21px;
+    }
+
+    input::placeholder {
+      color: $grayTextLight;
+    }
+
+    button {
+      margin: 0 16px;
+      padding: 0;
+
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: $grayTextLight;
+    }
+
+    button:hover {
+      filter: brightness(0.5);
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    a {
+      display: inherit;
+      color: inherit;
+    }
+
+    a:hover {
+      transform: scale(1.2);
+      filter: brightness(0.8);
+    }
+  }
+}
+
+.department-menu {
+  padding: 10px 56px;
+  box-shadow: 0px 8px 16px rgba(57, 48, 19, 0.12);
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 91px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+
+    li {
+      display: inherit;
+
+      a {
+        display: inherit;
+        gap: 12px;
+
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: 2px underline $pinkPrimary;
+      }
+    }
+  }
+}
