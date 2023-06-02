@@ -1,0 +1,16 @@
+@import '../../styles/colors.scss';
+
+.category-card-list-container {
+  margin-left: 86px;
+  margin-top: 34px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    gap: 53px;
+
+    list-style: none;
+  }
+}

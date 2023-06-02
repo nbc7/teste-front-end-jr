@@ -1,4 +1,5 @@
 import { Banner } from '../../components/Banner/Banner';
+import { CategoryCardList } from '../../components/CategoryCardList/CategoryCardList';
 import { Header } from '../../components/Header/Header';
 
 import './Home.scss';
@@ -9,6 +10,8 @@ export function Home() {
       <Header />
 
       <Banner />
+
+      <CategoryCardList />
     </div>
   );
 }
