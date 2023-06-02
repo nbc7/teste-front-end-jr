@@ -1,0 +1,12 @@
+@import './styles/colors.scss';
+
+:root {
+  font-family: 'Poppins', sans-serif;
+  color: $grayTextMedium;
+
+  background-color: $white;
+}
+
+body {
+  margin: 0;
+}
