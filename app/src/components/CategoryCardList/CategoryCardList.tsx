@@ -34,14 +34,8 @@ export function CategoryCardList() {
       <ul>
         {categories.map((category, index) => {
           return (
-            <li>
-              <CategoryCard
-                key={index}
-                image={category.image}
-                title={category.title}
-                onSelect={handleSelect}
-                isSelected={selectedCategory === category.title}
-              />
+            <li key={index}>
+              <CategoryCard image={category.image} title={category.title} onSelect={handleSelect} isSelected={selectedCategory === category.title} />
             </li>
           );
         })}
