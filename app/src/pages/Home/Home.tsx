@@ -1,6 +1,7 @@
+import { Header } from '../../components/Header/Header';
 import { Banner } from '../../components/Banner/Banner';
 import { CategoryCardList } from '../../components/CategoryCardList/CategoryCardList';
-import { Header } from '../../components/Header/Header';
+import { ProductShowcase } from '../../components/ProductShowcase/ProductShowcase';
 
 import './Home.scss';
 
@@ -9,9 +10,17 @@ export function Home() {
     <div className="container">
       <Header />
 
-      <Banner />
+      <main>
+        <Banner />
 
-      <CategoryCardList />
+        <CategoryCardList />
+
+        <ProductShowcase showCategories />
+
+        <ProductShowcase />
+
+        <ProductShowcase />
+      </main>
     </div>
   );
 }
