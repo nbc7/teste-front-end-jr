@@ -4,7 +4,25 @@ import { ProductModal } from '../ProductModal/ProductModal';
 
 import './ProductCard.scss';
 
-export function ProductCard() {
+interface ProductCardProps {
+  image: string;
+  title: string;
+  description: string;
+  price: string;
+  oldPrice?: string;
+  priceOption?: string;
+  shipping?: string;
+}
+
+export function ProductCard({
+  image,
+  title,
+  price,
+  description,
+  oldPrice = 'R$ 30,90',
+  priceOption = 'ou 2x de R$ 49,95 sem juros',
+  shipping = 'Frete grátis',
+}: ProductCardProps) {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   function handleBuy(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
@@ -15,31 +33,23 @@ export function ProductCard() {
 
   return (
     <>
-      {isModalOpen && (
-        <ProductModal
-          onClose={() => setIsModalOpen(false)}
-          image="https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png"
-          title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          price="R$ 28,90"
-        />
-      )}
+      {isModalOpen && <ProductModal onClose={() => setIsModalOpen(false)} image={image} title={title} description={description} price={price} />}
 
       <article onClick={() => setIsModalOpen(true)}>
         <div className="product-container">
-          <img src="https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png" alt="" />
+          <img src={image} alt={title} />
 
-          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+          <h3>{title}</h3>
 
           <div className="product-price-container">
-            <span className="price-old">R$ 30,90</span>
+            <span className="price-old">{oldPrice}</span>
 
-            <span className="price">R$ 28,90</span>
+            <span className="price">{price}</span>
 
-            <span className="price-option">ou 2x de R$ 49,95 sem juros</span>
+            <span className="price-option">{priceOption}</span>
           </div>
 
-          <span className="shipping">Frete grátis</span>
+          <span className="shipping">{shipping}</span>
 
           <button onClick={handleBuy}>comprar</button>
         </div>

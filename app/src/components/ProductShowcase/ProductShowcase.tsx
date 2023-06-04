@@ -8,10 +8,16 @@ import { ProductCard } from '../ProductCard/ProductCard';
 import './ProductShowcase.scss';
 
 interface ProductShowcaseProps {
+  products: {
+    image: string;
+    title: string;
+    price: string;
+    description: string;
+  }[];
   showCategories?: boolean;
 }
 
-export function ProductShowcase({ showCategories = false }: ProductShowcaseProps) {
+export function ProductShowcase({ products, showCategories = false }: ProductShowcaseProps) {
   const categories = ['celular', 'acessórios', 'tablets', 'notebooks', 'tvs', 'ver todos'];
 
   const [selectedCategory, setSelectedCategory] = useState<string>('celular');
@@ -52,10 +58,9 @@ export function ProductShowcase({ showCategories = false }: ProductShowcaseProps
         <img src={CaretLeft} className="caret-left" width={20} height={34} />
 
         <section>
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          {products.map((product, index) => {
+            return <ProductCard key={index} image={product.image} title={product.title} price={product.price} description={product.description} />;
+          })}
         </section>
 
         <img src={CaretRight} className="caret-right" width={20} height={34} />

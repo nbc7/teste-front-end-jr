@@ -103,8 +103,19 @@
     }
 
     section {
+      margin: -25px;
+      padding: 25px;
+      width: 1266px;
+      overflow-x: scroll;
+
       display: flex;
       gap: 62px;
+
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 }
