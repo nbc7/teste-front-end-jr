@@ -5,6 +5,7 @@ import { Header } from '../../components/Header/Header';
 import { Banner } from '../../components/Banner/Banner';
 import { CategoryCardList } from '../../components/CategoryCardList/CategoryCardList';
 import { ProductShowcase } from '../../components/ProductShowcase/ProductShowcase';
+import { BrandShowcase } from '../../components/BrandShowcase/BrandShowcase';
 
 import './Home.scss';
 
@@ -66,6 +67,8 @@ export function Home() {
         <ProductShowcase products={productsData} showCategories />
 
         <ProductShowcase products={productsData} />
+
+        <BrandShowcase />
 
         <ProductShowcase products={productsData} />
       </main>
