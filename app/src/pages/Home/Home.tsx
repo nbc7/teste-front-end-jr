@@ -6,9 +6,10 @@ import { Banner } from '../../components/Banner/Banner';
 import { CategoryCardList } from '../../components/CategoryCardList/CategoryCardList';
 import { ProductShowcase } from '../../components/ProductShowcase/ProductShowcase';
 import { BrandShowcase } from '../../components/BrandShowcase/BrandShowcase';
+import { BannerCard } from '../../components/BannerCard/BannerCard';
+import { Footer } from '../../components/Footer/Footer';
 
 import './Home.scss';
-import { BannerCard } from '../../components/BannerCard/BannerCard';
 
 interface ProductProps {
   photo: string;
@@ -85,6 +86,8 @@ export function Home() {
 
         <ProductShowcase products={productsData} />
       </main>
+
+      <Footer />
     </div>
   );
 }
