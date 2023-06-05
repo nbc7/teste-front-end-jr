@@ -2,9 +2,39 @@
   display: flex;
   flex-direction: column;
 
+  .category-card-list-wrapper {
+    margin-top: 34px;
+  }
+
   .banner-card-wrapper {
+    margin-top: 69px;
+
     display: flex;
     justify-content: center;
     gap: 89px;
+
+    &.big {
+      margin-top: 71px;
+    }
+  }
+
+  .product-showcase-wrapper-1 {
+    margin-top: 39px;
+  }
+
+  .product-showcase-wrapper-2 {
+    margin-top: 60px;
+  }
+
+  .product-showcase-wrapper-3 {
+    margin-top: 104px;
+  }
+
+  .brand-showcase-wrapper {
+    margin-top: 155px;
+  }
+
+  .footer-wrapper {
+    margin-top: 169px;
   }
 }

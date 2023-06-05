@@ -64,17 +64,23 @@ export function Home() {
       <main>
         <Banner />
 
-        <CategoryCardList />
+        <div className="category-card-list-wrapper">
+          <CategoryCardList />
+        </div>
 
-        <ProductShowcase products={productsData} showCategories />
+        <div className="product-showcase-wrapper-1">
+          <ProductShowcase products={productsData} showCategories />
+        </div>
 
-        <div className="banner-card-wrapper">
+        <div className="banner-card-wrapper big">
           <BannerCard variant="big" />
 
           <BannerCard variant="big" />
         </div>
 
-        <ProductShowcase products={productsData} />
+        <div className="product-showcase-wrapper-2">
+          <ProductShowcase products={productsData} />
+        </div>
 
         <div className="banner-card-wrapper">
           <BannerCard />
@@ -82,12 +88,18 @@ export function Home() {
           <BannerCard />
         </div>
 
-        <BrandShowcase />
+        <div className="brand-showcase-wrapper">
+          <BrandShowcase />
+        </div>
 
-        <ProductShowcase products={productsData} />
+        <div className="product-showcase-wrapper-3">
+          <ProductShowcase products={productsData} />
+        </div>
       </main>
 
-      <Footer />
+      <div className="footer-wrapper">
+        <Footer />
+      </div>
     </div>
   );
 }
