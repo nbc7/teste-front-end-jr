@@ -8,6 +8,7 @@ import { ProductShowcase } from '../../components/ProductShowcase/ProductShowcas
 import { BrandShowcase } from '../../components/BrandShowcase/BrandShowcase';
 
 import './Home.scss';
+import { BannerCard } from '../../components/BannerCard/BannerCard';
 
 interface ProductProps {
   photo: string;
@@ -66,7 +67,19 @@ export function Home() {
 
         <ProductShowcase products={productsData} showCategories />
 
+        <div className="banner-card-wrapper">
+          <BannerCard variant="big" />
+
+          <BannerCard variant="big" />
+        </div>
+
         <ProductShowcase products={productsData} />
+
+        <div className="banner-card-wrapper">
+          <BannerCard />
+
+          <BannerCard />
+        </div>
 
         <BrandShowcase />
 
