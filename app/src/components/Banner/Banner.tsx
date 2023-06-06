@@ -1,4 +1,4 @@
-import BannerImg from '../../assets/Banner.png';
+import BannerImg from '../../assets/Banner.webp';
 
 import './Banner.scss';
 
@@ -17,7 +17,7 @@ export function Banner({
 }: BannerProps) {
   return (
     <div className="banner-container">
-      <img src={image} alt="banner" />
+      <img src={image} alt="banner" width={1440} height={390} />
 
       <div className="banner-overlay"></div>
 

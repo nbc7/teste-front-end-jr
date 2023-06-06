@@ -104,7 +104,7 @@ export function ProductShowcase({ products, showCategories = false }: ProductSho
 
       <div className="carousel">
         <button className="caret-left" onClick={handleScrollLeft}>
-          <img src={CaretLeft} width={20} height={34} />
+          <img src={CaretLeft} alt="caret-left" width={20} height={34} />
         </button>
 
         <section ref={carouselItems}>
@@ -114,7 +114,7 @@ export function ProductShowcase({ products, showCategories = false }: ProductSho
         </section>
 
         <button className="caret-right" onClick={handleScrollRight}>
-          <img src={CaretRight} width={20} height={34} />
+          <img src={CaretRight} alt="caret-right" width={20} height={34} />
         </button>
       </div>
     </div>

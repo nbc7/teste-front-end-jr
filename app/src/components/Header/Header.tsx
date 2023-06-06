@@ -1,7 +1,7 @@
 import { ShieldCheck, Truck, CreditCard, Heart, UserCircle, ShoppingCart, MagnifyingGlass, CrownSimple } from '@phosphor-icons/react';
 
 import Logo from '../../assets/logos/vtex-pink.svg';
-import Box from '../../assets/icons/box.svg';
+import { ReactComponent as Box } from '../../assets/icons/box.svg';
 
 import './Header.scss';
 
@@ -45,25 +45,25 @@ export function Header() {
           <input type="text" placeholder="O que você está buscando?" />
 
           <button>
-            <MagnifyingGlass size={28} />
+            <MagnifyingGlass size={28} aria-label="Buscar" />
           </button>
         </form>
 
         <nav>
-          <a href="">
-            <img src={Box} width={28} />
+          <a href="#">
+            <Box width={28} height={28} aria-label="Pedidos" />
           </a>
 
-          <a href="">
-            <Heart size={32} />
+          <a href="#">
+            <Heart size={32} aria-label="Lista de desejos" />
           </a>
 
-          <a href="">
-            <UserCircle size={32} />
+          <a href="#">
+            <UserCircle size={32} aria-label="Conta" />
           </a>
 
-          <a href="">
-            <ShoppingCart size={32} />
+          <a href="#">
+            <ShoppingCart size={32} aria-label="Carrinho de compras" />
           </a>
         </nav>
       </div>
@@ -73,31 +73,31 @@ export function Header() {
       <main className="department-menu">
         <ul>
           <li>
-            <a href="">Todas Categorias</a>
+            <a href="#">Todas Categorias</a>
           </li>
 
           <li>
-            <a href="">Supermercado</a>
+            <a href="#">Supermercado</a>
           </li>
 
           <li>
-            <a href="">Livros</a>
+            <a href="#">Livros</a>
           </li>
 
           <li>
-            <a href="">Moda</a>
+            <a href="#">Moda</a>
           </li>
 
           <li>
-            <a href="">Lançamentos</a>
+            <a href="#">Lançamentos</a>
           </li>
 
           <li className="highlight">
-            <a href="">Ofertas do Dia</a>
+            <a href="#">Ofertas do Dia</a>
           </li>
 
           <li>
-            <a href="">
+            <a href="#">
               <CrownSimple size={20} weight="bold" />
               Assinatura
             </a>

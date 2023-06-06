@@ -15,7 +15,7 @@ export function CategoryCard({ image, title, onSelect, isSelected }: CategoryCar
   return (
     <div className={`category-card-container ${isSelected ? 'category-card-selected' : ''}`} onClick={handleClick}>
       <div className="category-card">
-        <img src={image} alt={title} />
+        <img src={image} alt={title} height={61} width={61} />
       </div>
 
       <span>{title}</span>

@@ -1,5 +1,5 @@
-import BannerCardImg from '../../assets/Card.png';
-import BannerCardBigImg from '../../assets/CardBig.png';
+import BannerCardImg from '../../assets/Card.webp';
+import BannerCardBigImg from '../../assets/CardBig.webp';
 
 import './BannerCard.scss';
 

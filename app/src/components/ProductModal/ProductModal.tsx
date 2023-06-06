@@ -32,7 +32,7 @@ export function ProductModal({ onClose, image, title, price, description }: Prod
 
             <p>{description}</p>
 
-            <a href="">Veja mais detalhes do produto &gt;</a>
+            <a href="#">Veja mais detalhes do produto &gt;</a>
           </div>
         </div>
       </div>

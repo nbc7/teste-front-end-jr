@@ -65,15 +65,15 @@ export function Footer() {
 
               <div className="socials">
                 <a href="#">
-                  <FacebookIcon width={22} height={22} />
+                  <FacebookIcon width={22} height={22} aria-label="Facebook" />
                 </a>
 
                 <a href="#">
-                  <InstagramLogo size={22} />
+                  <InstagramLogo size={22} aria-label="Instagram" />
                 </a>
 
                 <a href="#">
-                  <YoutubeLogo size={22} weight="fill" />
+                  <YoutubeLogo size={22} weight="fill" aria-label="Youtube" />
                 </a>
               </div>
             </div>
