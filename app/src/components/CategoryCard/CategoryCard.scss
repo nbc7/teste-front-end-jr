@@ -1,6 +1,7 @@
 @import '../../styles/colors.scss';
 
-$pinkPrimaryFilter: invert(20%) sepia(95%) saturate(4336%) hue-rotate(330deg) brightness(99%) contrast(95%);
+$pinkPrimaryFilter: invert(23%) sepia(63%) saturate(4954%) hue-rotate(328deg) brightness(96%) contrast(102%);
+
 $blackFilter: brightness(0);
 
 .category-card-container {
@@ -13,6 +14,7 @@ $blackFilter: brightness(0);
 
   font-weight: 500;
   line-height: 24px;
+  cursor: pointer;
 
   .category-card {
     height: 128px;
@@ -25,27 +27,23 @@ $blackFilter: brightness(0);
     border-radius: 10px;
     background-color: $grayBackgroundCard;
     box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.13);
+
+    img {
+      height: 61px;
+      filter: $blackFilter;
+    }
   }
 
-  img {
-    height: 61px;
-    filter: $blackFilter;
-  }
-}
+  &.category-card-selected {
+    color: $pinkPrimary;
 
-.category-card-container:hover {
-  cursor: pointer;
-}
+    .category-card {
+      background-color: $white;
+      box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.22);
 
-.category-card-selected {
-  color: $pinkPrimary;
-
-  .category-card {
-    background-color: $white;
-    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.22);
-  }
-
-  img {
-    filter: $pinkPrimaryFilter;
+      img {
+        filter: $pinkPrimaryFilter;
+      }
+    }
   }
 }
