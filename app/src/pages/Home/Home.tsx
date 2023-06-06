@@ -9,6 +9,8 @@ import { BrandShowcase } from '../../components/BrandShowcase/BrandShowcase';
 import { BannerCard } from '../../components/BannerCard/BannerCard';
 import { Footer } from '../../components/Footer/Footer';
 
+import VtexLogo from '../../assets/logos/vtex-pink.svg';
+
 import './Home.scss';
 
 interface ProductProps {
@@ -30,6 +32,19 @@ interface ProductsDataProps {
 
 export function Home() {
   const [productsData, setProductsData] = useState<ProductsDataProps[]>([]);
+
+  const brandsData = [
+    { name: 'Vtex', logo: VtexLogo, url: '#' },
+    { name: 'Vtex', logo: VtexLogo, url: '#' },
+    { name: 'Vtex', logo: VtexLogo, url: '#' },
+    { name: 'Vtex', logo: VtexLogo, url: '#' },
+    { name: 'Vtex', logo: VtexLogo, url: '#' },
+    { name: 'Vtex', logo: VtexLogo, url: '#' },
+    { name: 'Vtex', logo: VtexLogo, url: '#' },
+    { name: 'Vtex', logo: VtexLogo, url: '#' },
+    { name: 'Vtex', logo: VtexLogo, url: '#' },
+    { name: 'Vtex', logo: VtexLogo, url: '#' },
+  ];
 
   useEffect(() => {
     const fetchProductsData = async () => {
@@ -90,7 +105,7 @@ export function Home() {
         </div>
 
         <div className="brand-showcase-wrapper">
-          <BrandShowcase />
+          <BrandShowcase brands={brandsData} />
         </div>
 
         <div className="product-showcase-wrapper-3">

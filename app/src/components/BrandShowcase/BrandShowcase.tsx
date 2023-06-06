@@ -1,24 +1,17 @@
-import VtexLogo from '../../assets/logos/vtex-pink.svg';
-
 import CaretLeft from '../../assets/icons/caret-left.svg';
 import CaretRight from '../../assets/icons/caret-right.svg';
 
 import './BrandShowcase.scss';
 
-export function BrandShowcase() {
-  const brands = [
-    { name: 'Vtex', logo: VtexLogo },
-    { name: 'Vtex', logo: VtexLogo },
-    { name: 'Vtex', logo: VtexLogo },
-    { name: 'Vtex', logo: VtexLogo },
-    { name: 'Vtex', logo: VtexLogo },
-    { name: 'Vtex', logo: VtexLogo },
-    { name: 'Vtex', logo: VtexLogo },
-    { name: 'Vtex', logo: VtexLogo },
-    { name: 'Vtex', logo: VtexLogo },
-    { name: 'Vtex', logo: VtexLogo },
-  ];
+interface BrandShowcaseProps {
+  brands: {
+    name: string;
+    logo: string;
+    url: string;
+  }[];
+}
 
+export function BrandShowcase({ brands }: BrandShowcaseProps) {
   return (
     <div className="brand-showcase-container">
       <h2>Navegue por marcas</h2>
@@ -31,7 +24,7 @@ export function BrandShowcase() {
         <div className="brand-container">
           {brands.map((brand, index) => {
             return (
-              <a key={index} href="#">
+              <a key={index} href={brand.url}>
                 <img src={brand.logo} alt={brand.name} width={172} />
               </a>
             );
