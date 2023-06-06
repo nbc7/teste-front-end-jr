@@ -109,14 +109,14 @@ export function Footer() {
 
           <div className="newsletter-card-container">
             <div className="newsletter-card">
-              <p>
+              <div>
                 <h2>
                   cadastre-se e receba nossas
-                  <span className="">novidades e promoções</span>
+                  <span>novidades e promoções</span>
                 </h2>
 
                 <p>Excepteur sint occaecat cudatat non ent, sunt in culpa qui officia lorem ipsum</p>
-              </p>
+              </div>
 
               <form>
                 <input type="text" placeholder="seu e-mail" />
