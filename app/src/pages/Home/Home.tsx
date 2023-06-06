@@ -84,9 +84,9 @@ export function Home() {
         </div>
 
         <div className="banner-card-wrapper">
-          <BannerCard />
+          <BannerCard title="Produtos" />
 
-          <BannerCard />
+          <BannerCard title="Produtos" />
         </div>
 
         <div className="brand-showcase-wrapper">

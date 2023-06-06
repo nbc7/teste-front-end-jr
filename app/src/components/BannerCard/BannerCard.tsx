@@ -21,7 +21,7 @@ export function BannerCard({
   return (
     <div className={`banner-card-container ${variant === 'big' ? 'big' : ''}`}>
       <div>
-        <img src={image} alt="banner card" />
+        <img src={image} alt={title} />
       </div>
 
       <div className="banner-card-overlay"></div>
