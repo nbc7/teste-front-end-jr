@@ -73,6 +73,12 @@
               height: 22px;
               color: $white;
               text-decoration: none;
+
+              &:hover {
+                path {
+                  fill: $pinkPrimary;
+                }
+              }
             }
           }
         }

@@ -1,6 +1,6 @@
 import { InstagramLogo, YoutubeLogo } from '@phosphor-icons/react';
 
-import FacebookIcon from '../../assets/icons/facebook.svg';
+import { ReactComponent as FacebookIcon } from '../../assets/icons/facebook.svg';
 import EconverseLogo from '../../assets/logos/econverse.svg';
 import VtexLogo from '../../assets/logos/vtex-white.svg';
 import VisaImg from '../../assets/logos/payment/visa.svg';
@@ -65,7 +65,7 @@ export function Footer() {
 
               <div className="socials">
                 <a href="#">
-                  <img src={FacebookIcon} alt="facebook" width={22} height={22} />
+                  <FacebookIcon width={22} height={22} />
                 </a>
 
                 <a href="#">
