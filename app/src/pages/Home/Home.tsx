@@ -48,9 +48,10 @@ export function Home() {
 
           setProductsData(formatedData);
         } else {
+          console.error('API request failed');
         }
       } catch (error) {
-        throw error;
+        console.error(error);
       }
     };
 
